@@ -1,5 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Activity, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to(:user) }
+  it { should have_many(:activities_comments) }
+  it { should have_many(:activities_venues) }
+  it { should have_many(:votes) }
+  it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:date) }
+  it { should validate_presence_of(:time) }
+  it { should validate_presence_of(:user_id) }
 end

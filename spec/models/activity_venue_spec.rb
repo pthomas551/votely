@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ActivityVenue, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to(:activity) }
+  it { should validate_presence_of(:activity_id) }
+  it { should validate_presence_of(:venue_id) }
 end
