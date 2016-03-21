@@ -1,0 +1,16 @@
+
+<% @activities.each do |activity| %>
+<dl>
+
+  <dt>
+    <%= activity.name %>
+  </dt>
+  <dd>
+    <%= activity.description %>
+  </dd>
+  <dd>
+    <%= activity.date %> | <%= activity.time.strftime('%I:%M%p') %>
+  </dd>
+
+</dl>
+<% end %>
